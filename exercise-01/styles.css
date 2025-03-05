@@ -1,0 +1,39 @@
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.profile-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: royalblue;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: darkblue;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+  transition: background 0.3 ease-in-out;
+}
+
+.dark-mode .profile-card {
+  background: grey;
+}
