@@ -7,7 +7,14 @@
   } @else {
   <ul>
     @for (task of tasks; track task.id) {
-    <li>{{ task.name }} ({{ task.date | date : "shortTime" }})</li>
+    <li>
+      <strong>{{ task.name }}</strong>
+      <br />
+      <small>
+        📅 <span class="lit">{{ task.date | localizedDate }}</span> | 🕒
+        <span class="eng">{{ task.date | date : "shortTime" }}</span>
+      </small>
+    </li>
     }
   </ul>
   }
