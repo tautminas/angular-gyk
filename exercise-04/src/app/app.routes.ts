@@ -12,5 +12,5 @@ export const routes: Routes = [
     path: 'tasks',
     component: TaskComponent,
   },
-  // { path: 'tasks/:id', component: TaskpageComponent },
+  // { path: 'tasks/:id', component: TaskDetailComponent },
 ];
