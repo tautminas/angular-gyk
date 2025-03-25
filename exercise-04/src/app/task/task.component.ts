@@ -16,5 +16,6 @@ export class TaskComponent {
   addTask(): void {
     this.taskManagerService.addTask();
     this.tasks = this.taskManagerService.getTasks();
+    console.log(this.taskManagerService.getTaskById(this.tasks.length));
   }
 }

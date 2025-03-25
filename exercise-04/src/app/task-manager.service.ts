@@ -48,4 +48,8 @@ export class TaskManagerService {
   getTasks() {
     return this.tasks;
   }
+
+  getTaskById(id: number) {
+    return this.tasks.find((task) => task.id === id);
+  }
 }
