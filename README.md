@@ -7,7 +7,7 @@ This repository contains solutions to exercises from the Swedbank GYK (Grow Your
 1. Navigate into the project directory for the specific exercise you want to run. For example:
 
 ```bash
-cd exercise-01
+cd 1-javascript
 ```
 
 2. Install the necessary dependencies:
