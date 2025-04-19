@@ -10,7 +10,7 @@ import { TasksService } from '../tasks.service';
 import { TaskWithMessage } from '../tasks/task.model';
 import { map, startWith, take } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
-import { cenzurosValidator } from './cenzuros.validator';
+import { censorshipValidator } from './censorship.validator';
 
 @Component({
   selector: 'app-taskform',
@@ -33,9 +33,12 @@ import { cenzurosValidator } from './cenzuros.validator';
           </li>
           @if (textControl.errors?.['required']) {
           <span>Field is required</span>
-          } @else if (textControl.errors?.['cenzuruotas']) {
+          } @else if (textControl.errors?.['censored']) {
           <span>
-            Unwanted uncensored vocabulary: "{{ textControl.errors?.['cenzuruotas'].value
+            Unwanted uncensored vocabulary: "{{ textControl.errors?.['censored'].value
+
+
+
             }}"
           </span>
           }
@@ -67,7 +70,7 @@ export class TaskformComponent {
       validators: [
         Validators.required,
         Validators.maxLength(this.maxSymbols),
-        cenzurosValidator,
+        censorshipValidator,
       ],
       nonNullable: true,
     }),
