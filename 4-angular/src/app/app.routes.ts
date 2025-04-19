@@ -1,17 +1,17 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { TaskComponent } from './task/task.component';
-import { TaskDetailComponent } from './task-detail/task-detail.component';
+import { MainComponent } from './main/main.component';
+import { TasksComponent } from './tasks/tasks.component';
+import { TaskpageComponent } from './taskpage/taskpage.component';
 
 export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: HomeComponent,
+    component: MainComponent,
   },
   {
     path: 'tasks',
-    component: TaskComponent,
+    component: TasksComponent,
   },
-  { path: 'tasks/:id', component: TaskDetailComponent },
+  { path: 'tasks/:id', component: TaskpageComponent },
 ];

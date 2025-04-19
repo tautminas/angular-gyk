@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "exercise-04": {
+    "tasks": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/exercise-04",
+            "outputPath": "dist/tasks",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "exercise-04:build:production"
+              "buildTarget": "tasks:build:production"
             },
             "development": {
-              "buildTarget": "exercise-04:build:development"
+              "buildTarget": "tasks:build:development"
             }
           },
           "defaultConfiguration": "development"
